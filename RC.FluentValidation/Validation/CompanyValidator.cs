@@ -8,8 +8,8 @@ namespace RC.FluentValidation.Validation
         public CompanyValidator()
         {
             RuleFor(x => x.Id).NotNull();
-            RuleFor(x => x.Name).NotNull().MinimumLength(4).MaximumLength(60).WithMessage("Campo nome é obrigatório");
-            RuleFor(x => x.DateRegister).Must(CustomValidation.BeValidDate).WithMessage("Informe uma data válida");
+            RuleFor(x => x.Name).NotNull().MinimumLength(4).MaximumLength(60).WithMessage("name field is riquired!");
+            RuleFor(x => x.DateRegister).Must(CustomValidation.BeValidDate).WithMessage("datetime field is riquired!");
         }
     }
 }
